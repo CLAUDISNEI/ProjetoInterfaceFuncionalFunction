@@ -1,10 +1,27 @@
 package application;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import model.entities.Produto;
+import model.util.NomeCaixaAlta;
+
 public class ProgramaInterfaceFuncionalFunction {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		List<Produto> list = new ArrayList<>();
+		list.add(new Produto("Tv", 900.00));
+		list.add(new Produto("Mouse", 50.00));
+		list.add(new Produto("Tablet", 350.50));
+		list.add(new Produto("HD Case", 80.90));
+		
+		//criando uma nova lista somente com os nomes
+		List<String> nomes = list.stream().map(new NomeCaixaAlta()).collect(Collectors.toList());
+		
+		nomes.forEach(System.out::println);
+		
 	}
 
 }
