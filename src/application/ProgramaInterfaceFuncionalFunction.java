@@ -17,11 +17,10 @@ public class ProgramaInterfaceFuncionalFunction {
 		list.add(new Produto("Tablet", 350.50));
 		list.add(new Produto("HD Case", 80.90));
 		
-		//expressão lambda declarada
-		Function<Produto, String> func = p -> p.getNome().toUpperCase();
 		
+		//com expressao lambda inline
 		//criando uma nova lista somente com os nomes
-		List<String> nomes = list.stream().map(func).collect(Collectors.toList());
+		List<String> nomes = list.stream().map(p -> p.getNome().toUpperCase()).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 		
