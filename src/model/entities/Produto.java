@@ -34,12 +34,8 @@ public class Produto {
 		this.preco = preco;
 	}
 
-	public static void staticPrecoUpdate(Produto p) {
-		p.setPreco(p.getPreco() * 1.1);
-	}
-	
-	public void nonSstaticPrecoUpdate() {
-		preco = preco * 1.1;
+	public static String staticNomeCaixaAlta(Produto p) {
+		return p.getNome().toUpperCase();
 	}
 
 	@Override

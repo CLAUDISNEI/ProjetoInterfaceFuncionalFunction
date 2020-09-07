@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import model.entities.Produto;
-import model.util.NomeCaixaAlta;
 
 public class ProgramaInterfaceFuncionalFunction {
 
@@ -18,7 +17,7 @@ public class ProgramaInterfaceFuncionalFunction {
 		list.add(new Produto("HD Case", 80.90));
 		
 		//criando uma nova lista somente com os nomes
-		List<String> nomes = list.stream().map(new NomeCaixaAlta()).collect(Collectors.toList());
+		List<String> nomes = list.stream().map(Produto::staticNomeCaixaAlta).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 		
