@@ -17,7 +17,7 @@ public class ProgramaInterfaceFuncionalFunction {
 		list.add(new Produto("HD Case", 80.90));
 		
 		//criando uma nova lista somente com os nomes
-		List<String> nomes = list.stream().map(Produto::staticNomeCaixaAlta).collect(Collectors.toList());
+		List<String> nomes = list.stream().map(Produto::nonStaticNomeCaixaAlta).collect(Collectors.toList());
 		
 		nomes.forEach(System.out::println);
 		

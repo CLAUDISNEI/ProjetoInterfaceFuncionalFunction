@@ -37,6 +37,10 @@ public class Produto {
 	public static String staticNomeCaixaAlta(Produto p) {
 		return p.getNome().toUpperCase();
 	}
+	
+	public  String nonStaticNomeCaixaAlta() {
+		return nome.toUpperCase();
+	}
 
 	@Override
 	public String toString() {
